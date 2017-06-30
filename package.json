@@ -1,0 +1,43 @@
+{
+  "name": "ncarto",
+  "version": "0.0.1",
+  "main": "electron.js",
+  "productName": "ncarto",
+  "author": "thebentern",
+  "engines": {
+    "node": ">=7.9.0",
+    "npm": ">=4.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "systeminformation": "^3.23.5",
+    "vue": "^2.3.2",
+    "vue-router": "^2.5.0",
+    "vue-simple-spinner": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "css-loader": "^0.28.0",
+    "electron": "^1.7.0",
+    "electron-packager": "^8.6.0",
+    "eslint": "^4.1.1",
+    "pug": "^2.0.0-rc.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-loader": "^11.3.4",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.2",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "start": "webpack && electron .",
+    "unit": "",
+    "package": "npm run package-mac && npm run package-windows && npm run package-linux",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=dist",
+    "package-windows": "electron-packager . --overwrite --platform=win32 --arch=x64 --prune=true --out=dist",
+    "package-linux": "electron-packager . --overwrite --plateform=linux --arch=x64 --prune=true --out=dist"
+  }
+}
